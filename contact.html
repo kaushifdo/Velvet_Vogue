@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Velvet Vogue</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #f1f1f1;
+    }
+
+    header {
+      background: linear-gradient(to right, #001f3f, #000000);
+      padding: 20px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    }
+
+    nav a {
+      color: #a5c9ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #121212;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      text-align: center;
+      color: #3399ff;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      border: 1px solid #333;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #3399ff;
+    }
+
+    label {
+      font-weight: bold;
+      color: #aabbee;
+    }
+
+    button {
+      background-color: #001f3f;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 1.1em;
+      color: #dddddd;
+    }
+
+    .map {
+      margin-top: 30px;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #333;
+    }
+
+    footer {
+      background: #000000;
+      color: #888;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Velvet Vogue</h1>
+    <nav>
+      <a href="Fashion.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="categories.html">Categories</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="submitContactForm(event)">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-details">
+      <p><strong>📞 Phone:</strong> +94 77 123 4567</p>
+      <p><strong>📧 Email:</strong> support@velvetvogue.lk</p>
+      <p><strong>📍 Address:</strong> 123 Fashion Avenue, Colombo, Sri Lanka</p>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://maps.google.com/maps?q=colombo%20sri%20lanka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Velvet Vogue. All rights reserved.
+  </footer>
+
+  <script>
+    function submitContactForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thank you, ${name}! We have received your message and will get back to you shortly.`);
+    }
+  </script>
+
+</body>
+</html>
